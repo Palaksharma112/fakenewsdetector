@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+History
+</title>
+
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<h2>
+📰 Fake News Detector
+</h2>
+
+
+<div>
+
+<a href="/dashboard">
+home
+</a>
+
+
+<a href="/logout">
+Logout
+</a>
+
+
+</div>
+
+
+</nav>
+
+
+<div class="container">
+
+
+<h1>
+Previous Checks
+</h1>
+
+
+
+<table>
+
+
+<tr>
+
+<th>
+News
+</th>
+
+
+<th>
+Result
+</th>
+
+
+<th>
+Date
+</th>
+
+
+</tr>
+
+
+
+{% for item in records %}
+
+
+<tr>
+
+
+<td>
+{{ item[0] }}
+</td>
+
+
+<td>
+{{ item[1] }}
+</td>
+
+
+<td>
+{{ item[2] }}
+</td>
+
+
+</tr>
+
+
+{% endfor %}
+
+
+</table>
+
+
+</div>
+
+
+</body>
+
+
+</html>
